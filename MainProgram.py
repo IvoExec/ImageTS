@@ -48,9 +48,6 @@ class MainWindow(QMainWindow, QWidget):
         self.model_path = os.path.join('models', self.style_list[self.choose_style][0])
         self.model = Stylizer(self.model_path)
 
-        # 设置背景图片（推荐设置在 centralwidget 上）
-        self.ui.centralwidget.setStyleSheet("background-image: url(./images/backgroud-pic.jpg); background-repeat: no-repeat; background-position: center;")
-
     def connect_signals(self):
         self.ui.imgBtn.clicked.connect(self.get_image_file)
         self.ui.chageBtn.clicked.connect(self.change_img_style)
